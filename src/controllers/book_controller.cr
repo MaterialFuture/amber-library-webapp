@@ -51,8 +51,12 @@ class BookController < ApplicationController
     params.validation do
       required :title
       required :author
-      required :year
-      required :isbn
+      optional :edition
+      optional :isbn
+      optional :is_read
+      optional :review
+      optional :tags
+      optional :notes
     end
   end
 

@@ -9,18 +9,28 @@
       tr
         th Title
         th Author
-        th Year
-        th Isbn
+        th Edition
+        th Completed
         th Actions
     tbody
       - books.each do |book|
         tr
           td = book.title
           td = book.author
-          td = book.year
           td = book.isbn
           td
+             - if book.is_read == 1
+               | Not Completed
+             - elsif book.is_read == 2
+               | Read
+             - elsif book.is_read == 3
+               | Currently Reading
+             - elsif book.is_read == 4
+               | Dropped
+             - else
+               | err
+          td
             span
-              == link_to("Show", "/books/#{book.id}", class: "btn btn-info btn-sm")
+              == link_to("View", "/books/#{book.id}", class: "btn btn-info btn-sm")
               == link_to("Edit", "/books/#{book.id}/edit", class: "btn btn-success btn-sm")
               == link_to("Delete", "/books/#{ book.id }?_csrf=#{csrf_token}", "data-method": "delete", "data-confirm": "Are you sure?", class: "btn btn-danger btn-sm")
