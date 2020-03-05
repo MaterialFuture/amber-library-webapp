@@ -11,6 +11,8 @@ form action="/registration" method="post"
   .form-group
     input.form-control type="email" name="email" placeholder="Email"
   .form-group
+    input.form-control type="text" name="username" placeholder="Username"
+  .form-group
     input.form-control type="password" name="password" placeholder="Password"
   button.btn.btn-success.btn-sm type="submit"
     | Register

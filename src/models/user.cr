@@ -5,8 +5,11 @@ class User < Granite::Base
   connection sqlite
   table users
 
+  has_many books : Book
+
   column id : Int64, primary: true
   column email : String?
+  column username : String?
   column hashed_password : String?
 
   validate :email, "is required", ->(user : User) do
@@ -14,6 +17,15 @@ class User < Granite::Base
   end
 
   validate :email, "already in use", ->(user : User) do
+    existing = User.find_by email: user.email
+    !existing || existing.id == user.id
+  end
+
+  validate :username, "is required", ->(user : User) do
+    (email = user.email) ? !email.empty? : false
+  end
+
+  validate :username, "already in use", ->(user : User) do
     existing = User.find_by email: user.email
     !existing || existing.id == user.id
   end

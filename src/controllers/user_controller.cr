@@ -49,7 +49,8 @@ class UserController < ApplicationController
   private def user_params
     params.validation do
       required :email
-      optional :password
+      required :password
+      optional :username
     end
   end
 

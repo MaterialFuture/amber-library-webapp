@@ -1,17 +1,20 @@
-h1 Details
-table
+h1 = book.title
+table.table
   tablebody
   tr
+    td Title
     td = book.title
   tr
-    td = book.title
-  tr
+    td Author
     td = book.author
   tr
+    td Edition
     td = book.edition
   tr
+    td ISBN
     td = book.isbn
   tr
+    td Read Status
     td
        - if book.is_read == 1
          | Not Completed
@@ -24,10 +27,13 @@ table
        - else
          | err
   tr
+    td Review
     td = book.review
   tr
+    td Notes
     td = book.notes
 
+br
 p
   == link_to("Back", "/books", class: "btn btn-light btn-sm")
   == link_to("Edit", "/books/#{book.id}/edit", class: "btn btn-success btn-sm")
