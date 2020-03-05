@@ -1,8 +1,10 @@
-# cr_fullstack
+# New Reads
 
 [![Amber Framework](https://img.shields.io/badge/using-amber_framework-orange.svg)](https://amberframework.org)
 
-This is a project written using [Amber](https://amberframework.org). Enjoy!
+This is a webapp written in Crystal and powered by the Amber Framework. This
+webapp acts as a library where users store their books and can write notes +
+reviews about said books.
 
 ## Getting Started
 
@@ -39,7 +41,7 @@ crystal spec
 
 ## Contributing
 
-1. Fork it ( https://github.com/your-github-user/cr_fullstack/fork )
+1. Fork it ( https://github.com/materialfuture/amber-library-webapp/fork )
 2. Create your feature branch ( `git checkout -b my-new-feature` )
 3. Commit your changes ( `git commit -am 'Add some feature'` )
 4. Push to the branch ( `git push origin my-new-feature` )
@@ -47,4 +49,10 @@ crystal spec
 
 ## Contributors
 
-- [your-github-user](https://github.com/your-github-user) Konstantine - creator, maintainer
+- [your-github-user](https://github.com/materialfuture) Konstantine(MaterialFuture) - creator, maintainer
+
+## TODO
+
+- [ ] Add more validation routes like /book/new
+- [ ] Add roles to users via a roles table and foreign key assignment
+- [ ] Further integrate relation of books to users and so forth
