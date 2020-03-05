@@ -1,6 +1,7 @@
 -- +micrate Up
 CREATE TABLE books (
   id INTEGER NOT NULL PRIMARY KEY,
+  user_id INTEGER NOT NULL,
   title VARCHAR NOT NULL,
   author VARCHAR NOT NULL,
   edition VARCHAR NULL,
@@ -13,6 +14,7 @@ CREATE TABLE books (
   updated_at TIMESTAMP
 );
 
+CREATE INDEX 'user_id_idx' ON books (user_id);
 
 -- +micrate Down
 DROP TABLE IF EXISTS books;
