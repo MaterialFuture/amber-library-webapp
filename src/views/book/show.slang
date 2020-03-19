@@ -32,6 +32,11 @@ table.table
   tr
     td Notes
     td = book.notes
+  tr
+    td User Submitted
+    td 
+      span @
+      == book.user_id
 
 br
 p

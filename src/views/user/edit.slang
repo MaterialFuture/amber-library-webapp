@@ -8,10 +8,10 @@ h1 Edit Profile
 == form(action: "/profile", method: :patch) do
   == csrf_tag
   .form-group
-    input.form-control type="email" name="email" placeholder="Email" value="#{user.email}"
+    input.form-control required="true" type="email" name="email" placeholder="Email" value="#{user.email}"
   .form-group
-    input.form-control type="username" name="username" placeholder="@username" value="#{user.username}"
+    input.form-control required="true" type="username" name="username" placeholder="@username" value="#{user.username}"
   .form-group
-    input.form-control type="password" name="password" placeholder="Your Current assword"
+    input.form-control required="true" type="password" name="password" placeholder="Your Current assword"
   == submit("Update", class: "btn btn-success btn-sm")
   == link_to("Profile", "/profile", class: "btn btn-light btn-sm")
