@@ -1,11 +1,11 @@
 -- +micrate Up
 CREATE TABLE books (
   id INTEGER NOT NULL PRIMARY KEY,
-  user_id INTEGER NOT NULL,
   title VARCHAR NOT NULL,
   author VARCHAR NOT NULL,
-  edition VARCHAR NULL,
-  isbn VARCHAR NULL,
+  user_id INTEGER,
+  edition VARCHAR,
+  isbn VARCHAR,
   is_read INT,
   tags VARCHAR,
   review VARCHAR,
