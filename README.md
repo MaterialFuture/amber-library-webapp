@@ -2,6 +2,10 @@
 
 [![Amber Framework](https://img.shields.io/badge/using-amber_framework-orange.svg)](https://amberframework.org)
 
+## Update
+This project is archived, please refer to the GitLab repository for the most up-to-date version.
+
+## Info
 This is a webapp written in Crystal and powered by the Amber Framework. This
 webapp acts as a library where users store their books and can write notes +
 reviews about said books.
